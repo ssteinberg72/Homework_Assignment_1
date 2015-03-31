@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework Assignment #1</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+  <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.12.1.js"></script>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <script src="index.js"></script>
+
+  <style>
+    #containerDiv {
+      position: relative;
+      width:780px;
+    }
+    #leftDiv {
+       position: absolute;
+       top: 5px;
+       left: 5px;
+       float:left;
+       border:2px;
+       border-color:black;
+       width:300px;
+   }
+   #rightDiv {
+      position: absolute
+      top: 5px;
+      right: 5px;
+      float:right;
+      border:2px;
+      border-color:black;
+      width:480px;
+ }
+  </style>
+  
+</head>
+<body ng-app="radioExample">
+
+<div id="containerDiv"> 
+
+ <div id="leftDiv">
+  <input type="radio" ng-model="color.name" ng-click="myStyle={background:'red',color:'white'}" value="red"> Red &nbsp;
+  <input type="radio" ng-model="color.name" ng-click="myStyle={background:'blue',color:'white'}" value="blue"> Blue &nbsp;
+  <input type="radio" ng-model="color.name" ng-click="myStyle={background:'yellow',color:'black'}" value="yellow"> Yellow &nbsp;
+  <input type="radio" ng-model="color.name" ng-click="myStyle={background:'green', color:'white'}" value="green"> Green &nbsp;
+  <input type="radio" ng-model="color.name" ng-click="myStyle={background:'white'}" value="white"> None &nbsp;
+
+ <br><br>
+
+   <input type="checkbox" ng-model="collapsed" ng-click="collapsed=!collapsed">Expand Folders</a>
+
+   <div ng-show="collapsed">Folder 1<br>
+      Folder 2<br>
+      Folder 3</div>
+</div>
+</div>
+<br><br><br><br><br>
+<div id="rightDiv" ng-style="myStyle"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>Donec et efficitur risus, at commodo mauris. Aliquam arcu massa, volutpat quis bibendum sit amet, luctus sit amet libero. <br>Morbi non gravida neque. Proin neque nulla, pretium in vehicula sed, tincidunt sed urna. <br>Sed volutpat cursus sagittis. Nunc vel erat viverra, varius est vitae, pulvinar erat. <br>Fusce sapien nunc, tincidunt eget pellentesque ultricies, commodo dictum sapien. <br>Fusce blandit eu magna non pharetra. Pellentesque sit amet efficitur dolor. Quisque id accumsan leo. <br>Aliquam quis purus tellus. <br>Aliquam erat volutpat. Aliquam lacus nisl, vehicula vel nisl at, gravida elementum nibh.
+<br> 
+ <br><br>
+
+</div>
+</div>
+</body>
+</html>
